@@ -12,7 +12,9 @@ pip install cloudscraper
 
 ## Usages
 
-* Enable the middleware in scrapy's settings
+**Enable the middleware in scrapy's settings**
+
+_If you want to know more about the `TWISTED_REACTOR` setting, see Scrapy's [document](https://docs.scrapy.org/en/latest/topics/asyncio.html#installing-the-asyncio-reactor)._
 
 ```python
 DOWNLOADER_MIDDLEWARES = {
@@ -23,7 +25,7 @@ DOWNLOADER_MIDDLEWARES = {
 TWISTED_REACTOR = 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'
 ```
 
-* Enable the middleware in your requests
+**Enable the middleware in your requests**
 
 ```python
 def start_requests(self):
@@ -31,7 +33,7 @@ def start_requests(self):
     return scrapy.Request(url, meta={'cloudflare': True})
 ```
 
-* Enable the middleware in pipeline requests (if needed)
+**Enable the middleware in pipeline requests (if needed)**
 
 ```python
 class CustomImagesPipeline(ImagesPipeline):
