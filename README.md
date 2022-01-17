@@ -1,11 +1,12 @@
 # scrapy-async-cloudflare
 Asynchronous Cloudflare scraper middleware for Scrapy.
 
+> This as a short example of how to integrate asyncio and cloudscraper in Scrapy.
+
 ## Requirements
 * Scrapy >= 2.0 (needed for async support)
 * cloudscraper (needed for bypassing Cloudflare)
 
-Run the following command to install packages needed .
 ```sh
 pip install cloudscraper
 ```
